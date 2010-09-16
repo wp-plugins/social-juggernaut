@@ -37,7 +37,8 @@ function sj_settings_page() { ?>
     	"twitter" => "twitter",
     	"posterous" => "posterous",    	
     	"linkedin" => "linkedin",
-    	"rss" => "rss"   	
+    	"rss" => "rss"
+    	"youtube" => "youtube"   	
     );
 	
 	add_option($opt_name, $data_field_name);
@@ -53,7 +54,8 @@ function sj_settings_page() { ?>
         $opt_val["twitter"] = $_POST[ $data_field_name["twitter"] ];
         $opt_val["posterous"] = $_POST[ $data_field_name["posterous"] ];
         $opt_val["linkedin"] = $_POST[ $data_field_name["linkedin"] ];                
-        $opt_val["rss"] = $_POST[ $data_field_name["rss"] ];           
+        $opt_val["rss"] = $_POST[ $data_field_name["rss"] ]; 
+        $opt_val["youtube"] = $_POST[ $data_field_name["youtube"] ];                   
         
         // Save the posted value in the database
         update_option( $opt_name, $opt_val  );
@@ -87,6 +89,9 @@ function sj_settings_page() { ?>
 </p><hr />
 <p><?php _e("Twitter:", 'menu-test' ); ?> 
 <input type="text" name="<?php echo $data_field_name["twitter"]; ?>" value="<?php echo $opt_val["twitter"]; ?>" size="50">
+</p><hr />
+<p><?php _e("YouTube:", 'menu-test' ); ?> 
+<input type="text" name="<?php echo $data_field_name["youtube"]; ?>" value="<?php echo $opt_val["youtube"]; ?>" size="50">
 </p><hr />
 <p><?php _e("Posterous:", 'menu-test' ); ?> 
 <input type="text" name="<?php echo $data_field_name["posterous"]; ?>" value="<?php echo $opt_val["posterous"]; ?>" size="50">
@@ -129,6 +134,9 @@ function  sj_insert_button() {
 	if(!empty($options["twitter"])) {
 		echo "<a href='" . $options["twitter"] . "'><img class='icon' src='";?><?php echo bloginfo('url'); ?><?php echo "/wp-content/plugins/social-juggernaut/images/32px/twitter.png'/></a>";
 	}
+	if(!empty($options["youtube"])) {
+		echo "<a href='" . $options["youtube"] . "'><img class='icon' src='";?><?php echo bloginfo('url'); ?><?php echo "/wp-content/plugins/social-juggernaut/images/32px/youtube.png'/></a>";
+	}	
 	if(!empty($options["posterous"])) {
 		echo "<a href='" . $options["posterous"] . "'><img class='icon' src='";?><?php echo bloginfo('url'); ?><?php echo "/wp-content/plugins/social-juggernaut/images/32px/posterous.png'/></a>";
 	}

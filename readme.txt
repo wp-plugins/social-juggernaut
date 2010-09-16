@@ -10,13 +10,17 @@ Social Juggernaut was designed to place social media icons on your website.  The
 
 == Description ==
 
-The default setting for styling is 200px from the top and aligned against the right side of the browser window.  To change these settings, please open up 'plugins/social-juggernaut/socialjuggernaut.php', scroll down to function sj_insert_button() and make the necessary CSS edits.  
+This plugin was designed with ease-of-use in mind.  The coding used is very basic, so edits are not hard.  I will be updating in the future with updates that I feel necessary as well as user-suggested edits.  Some topics I want to address:<ul>
+<li>Drag and Drop order of Icons</li>
+<li>Verify URL input</li>
+<li>Update with more icons</li>
+</ul>
 
-This plugin wasn't necessarily designed to insert icons into div tags.  Instead, it's designed to place icons in relation to browser edges.  If you are interested in inserting icons into specific div tags you will have to alter the add_action hook (currently set to insert into wp_footer) or edit how you see fit.  If you're stumped, please e-mail me at contact AT juggernautwebsites.com!
+I would really appreciate feedback regarding the plugin.  I will be updating the icons available on a weekly basis, and I rely on you guys to suggest appropriate updates.
 
 Paul Ruescher:<ul> 
 <li>Twitter - @Paul_Ruescher</li>
-<li>Website - www.juggernautwebsites.com</li>
+<li>Website - http://www.juggernautwebsites.com/social_juggernaut/</li>
 <li>E-mail - contact AT juggernautwebsites.com</li></ul>
 
 == Installation ==

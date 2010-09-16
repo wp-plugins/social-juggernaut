@@ -3,6 +3,7 @@
 Plugin Name: Social Juggernaut
 Plugin URI: http://www.juggernautwebsites.com/social_juggernaut/
 Description: Inserts social media icons of your choice with respective links
+Version 1.0
 Author: Paul Ruescher
 Author URI: http://www.juggernautwebsites.com/
 License: GPL2
@@ -37,7 +38,7 @@ function sj_settings_page() { ?>
     	"twitter" => "twitter",
     	"posterous" => "posterous",    	
     	"linkedin" => "linkedin",
-    	"rss" => "rss"
+    	"rss" => "rss",
     	"youtube" => "youtube"   	
     );
 	

@@ -3,6 +3,7 @@
 Plugin Name: Social Juggernaut
 Plugin URI: http://www.juggernautwebsites.com/social_juggernaut/
 Description: Inserts social media icons of your choice with respective links
+Version: 1.1
 Author: Paul Ruescher
 Author URI: http://www.juggernautwebsites.com/
 License: GPL2
@@ -37,8 +38,9 @@ function sj_settings_page() { ?>
     	"twitter" => "twitter",
     	"posterous" => "posterous",    	
     	"linkedin" => "linkedin",
-    	"rss" => "rss"
-    	"youtube" => "youtube"   	
+    	"rss" => "rss",
+    	"youtube" => "youtube", 
+    	"google" => "google"  	
     );
 	
 	add_option($opt_name, $data_field_name);
@@ -55,7 +57,8 @@ function sj_settings_page() { ?>
         $opt_val["posterous"] = $_POST[ $data_field_name["posterous"] ];
         $opt_val["linkedin"] = $_POST[ $data_field_name["linkedin"] ];                
         $opt_val["rss"] = $_POST[ $data_field_name["rss"] ]; 
-        $opt_val["youtube"] = $_POST[ $data_field_name["youtube"] ];                   
+        $opt_val["youtube"] = $_POST[ $data_field_name["youtube"] ]; 
+        $opt_val["google"] = $_POST[ $data_field_name["google"] ];                           
         
         // Save the posted value in the database
         update_option( $opt_name, $opt_val  );
@@ -92,6 +95,9 @@ function sj_settings_page() { ?>
 </p><hr />
 <p><?php _e("YouTube:", 'menu-test' ); ?> 
 <input type="text" name="<?php echo $data_field_name["youtube"]; ?>" value="<?php echo $opt_val["youtube"]; ?>" size="50">
+</p><hr />
+<p><?php _e("Google:", 'menu-test' ); ?> 
+<input type="text" name="<?php echo $data_field_name["google"]; ?>" value="<?php echo $opt_val["youtube"]; ?>" size="50">
 </p><hr />
 <p><?php _e("Posterous:", 'menu-test' ); ?> 
 <input type="text" name="<?php echo $data_field_name["posterous"]; ?>" value="<?php echo $opt_val["posterous"]; ?>" size="50">
@@ -136,7 +142,10 @@ function  sj_insert_button() {
 	}
 	if(!empty($options["youtube"])) {
 		echo "<a href='" . $options["youtube"] . "'><img class='icon' src='";?><?php echo bloginfo('url'); ?><?php echo "/wp-content/plugins/social-juggernaut/images/32px/youtube.png'/></a>";
-	}	
+	}
+	if(!empty($options["google"])) {
+		echo "<a href='" . $options["google"] . "'><img class='icon' src='";?><?php echo bloginfo('url'); ?><?php echo "/wp-content/plugins/social-juggernaut/images/32px/google.png'/></a>";
+	}			
 	if(!empty($options["posterous"])) {
 		echo "<a href='" . $options["posterous"] . "'><img class='icon' src='";?><?php echo bloginfo('url'); ?><?php echo "/wp-content/plugins/social-juggernaut/images/32px/posterous.png'/></a>";
 	}
@@ -145,7 +154,8 @@ function  sj_insert_button() {
 	}	
 	if(!empty($options["rss"])) {
 		echo "<a href='" . $options["rss"] . "'><img class='icon' src='";?><?php echo bloginfo('url'); ?><?php echo "/wp-content/plugins/social-juggernaut/images/32px/rss.png'/></a>";
-	}			
+	}	
+			
 }
 
 add_action('wp_footer', 'sj_insert_button');

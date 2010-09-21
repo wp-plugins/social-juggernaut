@@ -4,7 +4,7 @@ Tags: social, media, icons
 Version: 1.0
 Requires at least: 2.0.2
 Tested up to: 3.01
-Stable tag: 1.0
+Stable tag: 1.1.1
 
 Social Juggernaut was designed to place social media icons on your website.  The CSS is very easy to edit, so you can place them essentially anywhere.
 

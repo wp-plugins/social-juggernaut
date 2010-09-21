@@ -97,7 +97,7 @@ function sj_settings_page() { ?>
 <input type="text" name="<?php echo $data_field_name["youtube"]; ?>" value="<?php echo $opt_val["youtube"]; ?>" size="50">
 </p><hr />
 <p><?php _e("Google:", 'menu-test' ); ?> 
-<input type="text" name="<?php echo $data_field_name["google"]; ?>" value="<?php echo $opt_val["youtube"]; ?>" size="50">
+<input type="text" name="<?php echo $data_field_name["google"]; ?>" value="<?php echo $opt_val["google"]; ?>" size="50">
 </p><hr />
 <p><?php _e("Posterous:", 'menu-test' ); ?> 
 <input type="text" name="<?php echo $data_field_name["posterous"]; ?>" value="<?php echo $opt_val["posterous"]; ?>" size="50">

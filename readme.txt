@@ -1,5 +1,6 @@
 === Social Juggernaut  ===
 Contributors: screenwords15
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=production%40juggernautwebsites%2ecom&lc=CA&item_name=Juggernaut%20Websites&item_number=XAMUQP6EA64FS&no_note=0&cn=Add%20special%20instructions%20to%20the%20seller&no_shipping=2&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 Tags: social, media, icons
 Version: 1.0
 Requires at least: 2.0.2
@@ -50,6 +51,10 @@ A-1: The plugin was designed so that the icon will not show up if there is no li
 A-2: Most likely whoever created your theme did not include the common Wordpress template tag 'wp_footer'.  This plugin hooks onto that tag so it is vital.  You can do one of three things: 1) insert it yourself - place the code <?php wp_footer(); ?> right before </body> in your HTML 2) beg your web designer to insert the <?php wp_footer(); ?> code for you 3) e-mail me and I can walk you through the process.
 
 A-3: The link to the images I included in the plugin isn't working properly.  In the file socialjuggernaut.php there is a function, 'function sm_insert_button()' that inserts all the social media buttons.  Check to make sure that each image source (<img src"") link is working properly.  By default it should be "http://www.yoursite.com/wp-content/plugins/social-juggernaut/images/32px/.....png".  If the images are not in this location then they will not display.  If you found the file socialjuggernaut.php then the images folder should be visible.  If not, try re-installing the plugin.  Or contact me.
+
+== Screenshots ==
+
+socialjuggernautscreenshot.png
 
 == Changelog ==
 
